@@ -40,11 +40,11 @@ Nerd font is required because default fonts do not support Icons and Glyphicons.
 ## Root and Not Root
 
 ### Non Root
-- Uncomment USER node in Dockerfile
+- Replace `USER root` to `USER node`
 
   
 ### Root
-- Comment USER node in Dockerfile
+- Replace `USER node` to `USER root`
 
 ### NOTE
 - Global packages cannot be instaled as non root user
