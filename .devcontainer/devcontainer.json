@@ -23,5 +23,6 @@
 	"postCreateCommand": "cp .devcontainer/.zshrc $HOME && cp .devcontainer/.p10k.zsh $HOME",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// Make sure its uncommented here and in dockerfile to prevent zsh issues
 	"remoteUser": "node"
 }
