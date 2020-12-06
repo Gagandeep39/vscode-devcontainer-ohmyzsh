@@ -36,3 +36,16 @@ Nerd font is required because default fonts do not support Icons and Glyphicons.
 - `powerlevel10k` First time setup has been disabled by default
 - To install any oh-my-zsh plugin, add the git clone command to [.devcontainer -> Dockerfile](.devcontainer/Dockerfile)
 - Rebuild Container after changing any of these settings
+
+## Root and Not Root
+
+### Non Root
+- Uncomment USER node in Dockerfile
+
+  
+### Root
+- Comment USER node in Dockerfile
+
+### NOTE
+- Global packages cannot be instaled as non root user
+- Add them to dockerfile instead
