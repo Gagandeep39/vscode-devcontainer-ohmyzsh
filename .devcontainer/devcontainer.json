@@ -1,9 +1,7 @@
 {
-	"name": "Node.js",
+	"name": "Node.js 14 LTS",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 10, 12, 14
-		"args": { "VARIANT": "14" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -13,7 +11,12 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"edwardhjp.vscode-author-generator",
+		"oderwat.indent-rainbow",
+		"mutantdino.resourcemonitor",
+		"yzhang.markdown-all-in-one",
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -23,6 +26,5 @@
 	"postCreateCommand": "cp .devcontainer/.zshrc $HOME && cp .devcontainer/.p10k.zsh $HOME",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	// Make sure its uncommented here and in dockerfile to prevent zsh issues
 	// "remoteUser": "node"
 }
