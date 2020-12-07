@@ -1,9 +1,11 @@
-FROM node
+FROM node:14.15.1
 ##############################################################
 ################        Installing Packages     ##############
 ##############################################################
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends zsh
+# Run npm -g command below
+# RUN npm install
 ##############################################################
 ################            Create User        ###############
 ##############################################################
